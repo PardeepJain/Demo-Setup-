@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Peloteando</title>
+  <base href="/"> {{#unless environment.production}}
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
+  {{/unless}}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="angular2.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!--Prime-NG-->
+  <link rel="stylesheet" type="text/css" href="vendor/primeui/themes/omega/theme.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/primeui/primeui-ng-all.min.css" />
+  <link rel="stylesheet" type="text/css" href="vivofy.css" />
+  <script src="vendor/primeui/primeui-ng-all.min.js"></script>
+  <!--Prime-NG-->
+
+  <!--Toaster-->
+  <!--<link href="./lib/css/toastr/toastr.css" rel="stylesheet" type="text/css">
+  <script src="./lib/javascript/toastr/toastr.js"></script>-->
+  <!--Toaster-->
+</head>
+
+<body>
+  <app-root>
+    <div class="sk-circle">
+      <div class="sk-circle1 sk-child"></div>
+      <div class="sk-circle2 sk-child"></div>
+      <div class="sk-circle3 sk-child"></div>
+      <div class="sk-circle4 sk-child"></div>
+      <div class="sk-circle5 sk-child"></div>
+      <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+      <div class="sk-circle8 sk-child"></div>
+      <div class="sk-circle9 sk-child"></div>
+      <div class="sk-circle10 sk-child"></div>
+      <div class="sk-circle11 sk-child"></div>
+      <div class="sk-circle12 sk-child"></div>
+    </div>
+    </app-root="text/javascript">
+
+    {{#each scripts.polyfills}}
+    <script src="{{.}}"></script>{{/each}}
+    <script>
+      System.import('system-config.js').then(function () {
+        System.import('main');
+      }).catch(console.error.bind(console));
+    </script>
+</body>
+
+</html>
